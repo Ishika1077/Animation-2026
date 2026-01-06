@@ -46,7 +46,7 @@ body {
 
 .sidebar h4 {
   font-size: 12px;
-  color: #ff6b6b;
+  color: #15cac4;
   margin-bottom: 14px;
   text-transform: uppercase;
 }
@@ -63,8 +63,8 @@ body {
 
 
 .nav a:hover {
-  background: #ffd6d6;
-  color: #ff6b6b;
+  background: #affaf8;
+  color: #15cac4;
   font-weight: 500;
 }
 
@@ -97,15 +97,15 @@ body {
 }
 
 .header nav a:hover {
-  text-decoration:underline rgb(241, 180, 180);
-  color: #ff6b6b;
+  text-decoration:underline #affaf8;
+  color: #15cac4;
  
 }
 
 .login {
-  background:rgb(241, 180, 180) ;
+  background:#affaf8 ;
   
-  color:#ff6b6b ;
+  color:#15cac4 ;
   padding: 10px 18px;
   border-radius: 10px;
   font-size: 13px;
@@ -126,8 +126,8 @@ body {
 
 .badge {
   display: inline-block;
-  background:  #ffd6d6;
-  color: #ff6b6b;
+  background:  #affaf8;
+  color: #15cac4;
   padding: 6px 12px;
   font-size: 12px;
   border-radius: 20px;
@@ -161,22 +161,22 @@ body {
 }
 
 .btn.primary {
-  background: #ff6b6b;
+  background: #15cac4;
   color: #fff;
 }
 
 .btn.secondary {
-  background:  #ffd6d6;
-  color: #ff6b6b;
+  background:  #affaf8;
+  color: #15cac4;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(91,108,255,.25);
+  box-shadow: 0 10px 20px rgba(129, 235, 247, 0.684);
 }
 
 .hero-art {
-  background:#ffd6d6;
+ 
   border-radius: 22px;
   animation: float 6s ease-in-out infinite;
 }
@@ -205,19 +205,18 @@ body {
 }
 
 .icon-box {
-  background: #ffeaeaa4;
+  
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 140px;
 }
 
 .icon {
-  width: 42px;
-  height: 42px;
+  width: 10px;
+  height: 10px;
   border-radius: 12px;
-  background:  #ffd6d6;
+ 
 }
 
 .item h3 {
@@ -294,11 +293,12 @@ body {
 
     <!-- Header -->
     <div class="header">
-      <strong>AnimEdu</strong>
+      <strong><span style="color: #15cac4;">Anim</span>Edu</strong>
       <nav>
         <a>Home</a>
-        <a>Principals</a>
+       
         <a>Types of Animation</a>
+         <a>Resources</a>
         <a>Contact</a>
         <a class="login">Log In</a>
       </nav>
@@ -318,7 +318,9 @@ body {
           <a class="btn secondary">Watch Video Intro</a>
         </div>
       </div>
-      <div class="hero-art"></div>
+      <div class="hero-art">
+        <img style="width: 500px;border-radius: 12px;" src="Gallery/banner.png">
+      </div>
     </section>
 
     <!-- Principles -->
@@ -327,17 +329,19 @@ body {
         <div>
           <span class="badge">01</span>
           <h3>Squash and Stretch</h3>
-          <p>Gives the illusion of weight and flexibility to characters.</p>
+          <p>This principle shows how objects change shape when they move, like a bouncing ball squashing on the ground and stretching in the air. It helps make animations feel more flexible, alive, and realistic.</p>
         </div>
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+         <img style="width: 400px; height: 250px;" src="Gallery/squash.jpg"><div class="icon"></div></div>
       </div>
 
       <div class="item">
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+            <img style="width: 400px; height: 250px;" src="Gallery/anti.gif"><div class="icon"></div></div>
         <div>
           <span class="badge">02</span>
           <h3>Anticipation</h3>
-          <p>Prepares the audience for an important action.</p>
+          <p>Anticipation prepares the audience for an action before it happens, such as a character bending knees before jumping. It makes movements clearer and more believable.</p>
         </div>
       </div>
 
@@ -345,17 +349,19 @@ body {
         <div>
           <span class="badge">03</span>
           <h3>Staging</h3>
-          <p>Directs attention to what is important in the scene.</p>
+          <p>Staging is about presenting an idea clearly by using proper camera angles, lighting, and character placement. It helps the audience understand what is important in a scene.</p>
         </div>
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+            <img style="width: 450px; height: 250px;" src="Gallery/stagging.jpg"><div class="icon"></div></div>
       </div>
 
       <div class="item">
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/posetopose.gif"><div class="icon"></div></div>
         <div>
           <span class="badge">04</span>
           <h3>Straight Ahead & Pose to Pose</h3>
-          <p>Two different approaches to drawing animation.</p>
+          <p>Straight ahead action means animating frame by frame from start to end, while pose to pose focuses on drawing key poses first. Both methods help control motion and timing in different ways.</p>
         </div>
       </div>
 
@@ -363,17 +369,18 @@ body {
         <div>
           <span class="badge">05</span>
           <h3>Follow Through</h3>
-          <p>Directs attention to what is important in the scene.</p>
+          <p>When a character stops moving, parts like hair or clothes continue moving slightly. This principle adds realism by showing that not all parts stop at the same time.</p>
         </div>
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box"> <img style="width: 450px; height: 250px;" src="Gallery/flow.gif"><div class="icon"></div></div>
       </div>
 
       <div class="item">
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/slow in.jpg"><div class="icon"></div></div>
         <div>
           <span class="badge">06</span>
           <h3>Slow In & Slow Out</h3>
-          <p>Two different approaches to drawing animation.</p>
+          <p>Movements usually start slowly, speed up, and then slow down again. Adding more frames at the beginning and end makes actions look smooth and natural.</p>
         </div>
       </div>
 
@@ -381,17 +388,19 @@ body {
         <div>
           <span class="badge">07</span>
           <h3>Arcs</h3>
-          <p>Directs attention to what is important in the scene.</p>
+          <p>Most natural movements follow curved paths rather than straight lines. Using arcs makes character motion look more fluid and lifelike.</p>
         </div>
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/arcanim.gif"><div class="icon"></div></div>
       </div>
 
       <div class="item">
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/secondary.gif"><div class="icon"></div></div>
         <div>
           <span class="badge">08</span>
           <h3>Secondary Actions</h3>
-          <p>Two different approaches to drawing animation.</p>
+          <p>Secondary actions support the main action, like facial expressions while walking. They add detail and make characters more interesting without distracting from the main movement.</p>
         </div>
       </div>
 
@@ -399,17 +408,19 @@ body {
         <div>
           <span class="badge">09</span>
           <h3>Timing</h3>
-          <p>Directs attention to what is important in the scene.</p>
+          <p>Timing refers to how many frames are used for an action, which affects speed and weight. Good timing makes movements feel realistic and helps show emotions and personality.</p>
         </div>
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/timimg.gif"><div class="icon"></div></div>
       </div>
 
       <div class="item">
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/exagration.gif"><div class="icon"></div></div>
         <div>
           <span class="badge">10</span>
           <h3>Exaggeration</h3>
-          <p>Two different approaches to drawing animation.</p>
+          <p>Exaggeration means pushing movements or expressions slightly beyond reality. It makes animations more entertaining and helps emotions and actions stand out clearly.</p>
         </div>
       </div>
 
@@ -417,17 +428,19 @@ body {
         <div>
           <span class="badge">11</span>
           <h3>Solid Drawing</h3>
-          <p>Directs attention to what is important in the scene.</p>
+          <p>Solid drawing focuses on creating characters with proper structure, balance, and weight. It helps animators draw characters that feel three-dimensional and stable.</p>
         </div>
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/soliddraw.gif"><div class="icon"></div></div>
       </div>
 
       <div class="item">
-        <div class="icon-box"><div class="icon"></div></div>
+        <div class="icon-box">
+           <img style="width: 450px; height: 250px;" src="Gallery/appeal.gif"><div class="icon"></div></div>
         <div>
           <span class="badge">12</span>
           <h3>Appeal</h3>
-          <p>Two different approaches to drawing animation.</p>
+          <p>Solid drawing focuses on creating characters with proper structure, balance, and weight. It helps animators draw characters that feel three-dimensional and stable.</p>
         </div>
       </div>
 
