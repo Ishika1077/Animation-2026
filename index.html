@@ -99,6 +99,7 @@ body {
 .header nav a:hover {
   text-decoration:underline #affaf8;
   color: #15cac4;
+  font-size: 16px;
  
 }
 
@@ -193,7 +194,7 @@ body {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 26px;
-  background: #ffffff;
+  background: #c9f7f663;
   padding: 26px;
   border-radius:16px;
   box-shadow:  0 12px 30px rgba(17,24,39,0.06);
@@ -206,7 +207,7 @@ body {
 
 .icon-box {
   
-  border-radius: 14px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,14 +254,171 @@ body {
   50% { transform: translateY(-14px) }
 }
 
+
+
+
 /* Responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-art img,
+.icon-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+
+
+/* ========================= */
+/* LARGE DESKTOP (1200px+) */
+/* ========================= */
+@media (min-width: 1200px) {
+  .main {
+    padding: 40px 60px 80px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+/* ========================= */
+/* LAPTOP / SMALL DESKTOP */
+/* ========================= */
+@media (max-width: 1199px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    padding: 32px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .icon-box img {
+    width: 100%;
+  }
+}
+
+/* ========================= */
+/* TABLET (≤ 960px) */
+/* ========================= */
+@media (max-width: 960px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .header nav {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .item:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================= */
+/* MOBILE LARGE (≤ 600px) */
+/* ========================= */
+@media (max-width: 600px) {
+  .main {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .badge {
+    font-size: 11px;
+  }
+
+  .item {
+    padding: 20px;
+  }
+
+  .item h3 {
+    font-size: 16px;
+  }
+}
+
+/* ========================= */
+/* SMALL MOBILE (≤ 400px) */
+/* ========================= */
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .header nav a {
+    font-size: 12px;
+  }
+
+  .login {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+
+
+
+/* Responsive 
 
 @media (max-width: 960px) {
   .app { grid-template-columns: 1fr }
   .sidebar { display: none }
   .hero { grid-template-columns: 1fr }
   .item { grid-template-columns: 1fr }
-}
+}*/
 </style>
 </head>
 
@@ -273,18 +431,18 @@ body {
     <div class="logo">Animation Basics</div>
     <h4>Principles</h4>
     <div class="nav">
-      <a>Squash & Stretch</a>
-      <a>Anticipation</a>
-      <a>Staging</a>
-      <a>Straight Ahead & Pose to Pose</a>
-      <a>Follow Through</a>
-      <a>Slow In & Slow Out</a>
-      <a>Arcs</a>
-      <a>Secondary Action</a>
-      <a>Timing</a>
-      <a>Exaggeration</a>
-      <a>Solid Drawing</a>
-      <a>Appeal</a>
+      <a href="#ani1">Squash & Stretch</a>
+      <a href="#ani2">Anticipation</a>
+      <a href="#ani3">Staging</a>
+      <a href="#ani4">Straight Ahead & Pose to Pose</a>
+      <a href="#ani5">Follow Through</a>
+      <a href="#ani6">Slow In & Slow Out</a>
+      <a href="#ani7">Arcs</a>
+      <a href="#ani8">Secondary Action</a>
+      <a href="#ani9">Timing</a>
+      <a href="#ani10">Exaggeration</a>
+      <a href="#ani11">Solid Drawing</a>
+      <a href="#ani12">Appeal</a>
     </div>
   </aside>
 
@@ -325,6 +483,7 @@ body {
 
     <!-- Principles -->
     <section class="list">
+       <div id="ani1">
       <div class="item">
         <div>
           <span class="badge">01</span>
@@ -334,7 +493,10 @@ body {
         <div class="icon-box">
          <img style="width: 400px; height: 250px;" src="Gallery/squash.jpg"><div class="icon"></div></div>
       </div>
+      </div>
 
+
+       <div id="ani2">
       <div class="item">
         <div class="icon-box">
             <img style="width: 400px; height: 250px;" src="Gallery/anti.gif"><div class="icon"></div></div>
@@ -344,7 +506,9 @@ body {
           <p>Anticipation prepares the audience for an action before it happens, such as a character bending knees before jumping. It makes movements clearer and more believable.</p>
         </div>
       </div>
+      </div>
 
+     <div id="ani3">
       <div class="item">
         <div>
           <span class="badge">03</span>
@@ -354,7 +518,10 @@ body {
         <div class="icon-box">
             <img style="width: 450px; height: 250px;" src="Gallery/stagging.jpg"><div class="icon"></div></div>
       </div>
+      </div>
 
+
+        <div id="ani4">
       <div class="item">
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/posetopose.gif"><div class="icon"></div></div>
@@ -364,7 +531,10 @@ body {
           <p>Straight ahead action means animating frame by frame from start to end, while pose to pose focuses on drawing key poses first. Both methods help control motion and timing in different ways.</p>
         </div>
       </div>
+      </div>
 
+
+       <div id="ani5">
  <div class="item">
         <div>
           <span class="badge">05</span>
@@ -373,7 +543,12 @@ body {
         </div>
         <div class="icon-box"> <img style="width: 450px; height: 250px;" src="Gallery/flow.gif"><div class="icon"></div></div>
       </div>
+      </div>
 
+
+
+
+       <div id="ani6">
       <div class="item">
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/slow in.jpg"><div class="icon"></div></div>
@@ -383,7 +558,11 @@ body {
           <p>Movements usually start slowly, speed up, and then slow down again. Adding more frames at the beginning and end makes actions look smooth and natural.</p>
         </div>
       </div>
+      </div>
 
+
+
+       <div id="ani7">
        <div class="item">
         <div>
           <span class="badge">07</span>
@@ -393,7 +572,10 @@ body {
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/arcanim.gif"><div class="icon"></div></div>
       </div>
+      </div>
 
+
+       <div id="ani8">
       <div class="item">
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/secondary.gif"><div class="icon"></div></div>
@@ -403,7 +585,10 @@ body {
           <p>Secondary actions support the main action, like facial expressions while walking. They add detail and make characters more interesting without distracting from the main movement.</p>
         </div>
       </div>
+      </div>
 
+
+       <div id="ani9">
        <div class="item">
         <div>
           <span class="badge">09</span>
@@ -413,7 +598,10 @@ body {
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/timimg.gif"><div class="icon"></div></div>
       </div>
+      </div>
 
+
+       <div id="ani10">
       <div class="item">
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/exagration.gif"><div class="icon"></div></div>
@@ -423,7 +611,10 @@ body {
           <p>Exaggeration means pushing movements or expressions slightly beyond reality. It makes animations more entertaining and helps emotions and actions stand out clearly.</p>
         </div>
       </div>
+      </div>
 
+
+       <div id="ani11">
        <div class="item">
         <div>
           <span class="badge">11</span>
@@ -433,7 +624,9 @@ body {
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/soliddraw.gif"><div class="icon"></div></div>
       </div>
+     </div>
 
+       <div id="ani12">
       <div class="item">
         <div class="icon-box">
            <img style="width: 450px; height: 250px;" src="Gallery/appeal.gif"><div class="icon"></div></div>
@@ -443,7 +636,7 @@ body {
           <p>Solid drawing focuses on creating characters with proper structure, balance, and weight. It helps animators draw characters that feel three-dimensional and stable.</p>
         </div>
       </div>
-
+      </div>
     </section>
 
   </main>
