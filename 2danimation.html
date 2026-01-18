@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> 2D Animation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+
+
+    @keyframes ani1
+  {
+    from{opacity:0 }
+    to{opacity:1}
+  }
+
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+
+    body 
+    {
+       background:#fefdfd; 
+       color:#222; 
+       animation:ani1 2s;
+      }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 24px;
+}
+    
+    header {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:15px;
+      z-index:100;
+    }
+
+    .home {
+      width:90%;
+      max-width:1350px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+   
+   
+    nav a 
+    {
+      color:#6b7280;
+      margin-left:20px;
+      font-size:14px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px;  
+    }
+   
+
+    nav a:hover {
+  text-decoration:underline #affaf8;
+  color: #15cac4;
+  font-size: 16px;
+ 
+}
+
+
+
+.login {
+  background:#affaf8 ;
+  
+  color:#15cac4 ;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+
+
+
+
+/* ================= HERO ================= */
+.hero{
+  padding:64px 100px;
+}
+.hero-box{
+  background:#fff;
+  border-radius:26px;
+  padding:64px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:48px;
+  align-items:center;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.hero h1{
+  font-size:52px;
+  margin:16px 0;
+  line-height:1.1;
+}
+.hero h1 span{
+  color:#15cac4;
+}
+.hero p{
+  color:#6b7280;
+  max-width:520px;
+}
+.hero-actions{
+  margin-top:32px;
+  display:flex;
+  gap:16px;
+}
+.hero img{
+  width:100%;
+  border-radius:20px;
+}
+
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all .3s ease;
+}
+
+.btn.primary {
+  background: #15cac4;
+  color: #fff;
+  border-color: #15cac4;
+}
+
+.btn.secondary {
+  background:  #affaf8;
+  color: #15cac4;
+    border-color: #15cac4;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(129, 235, 247, 0.684);
+}
+
+
+
+
+
+
+/* ================= SECTION ================= */
+section{
+  padding:32px 50px;
+}
+.section-title{
+  
+  margin-bottom:28px;
+  margin-top: 15px;
+  text-align:center;
+}
+
+/* ================= WHAT IS ================= */
+.what{
+  background:#0a0a0a;
+  color: #fff;
+  padding:48px;
+  border-radius:22px;
+  box-shadow:0 18px 30px rgba(18, 18, 18, 0.001);
+}
+.what h2{
+
+text-align: center;
+
+}
+.what img{
+  width:90%;
+  box-shadow: 10px 10px 30px rgba(129, 235, 247, 0.684);
+  border-radius:20px;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+/* ================= CARDS ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+.card{
+  background:#fff;
+  padding:28px;
+  border-radius:20px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-8px);}
+.card h4{margin-bottom:10px;}
+
+/* ================= WORKFLOW ================= */
+.workflow{
+  background:#090909;
+  color: #fff;
+  padding:38px;
+  border-radius:22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+.step{text-align:center;}
+.step-circle{
+  width:48px;
+  height:48px;
+  margin:0 auto 12px;
+  border-radius:50%;
+  border:2px solid #79eff571;
+  color: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+.step :hover{
+  border: 4px solid #15cac4;
+  color:#15cac4;
+}
+
+/* ================= SHOWCASE ================= */
+.showcase{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+.show-card{
+  background:#fff;
+  padding:16px;
+  border-radius:20px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+.show-card img{
+  width:100%;
+  border-radius:16px;
+}
+
+.cta{
+  background:#e0f7fa;
+  padding:52px;
+  margin: 5%;
+  border-radius:28px;
+  text-align:center;
+  color:#6b7280;
+}
+.cta p{margin:16px 0 32px;}
+
+
+
+
+
+/* ================= RESPONSIVE FIXES ================= */
+
+/* Large screens (1200px and below) */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 48px 40px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+}
+
+/* Tablets & small laptops (992px and below) */
+@media (max-width: 992px) {
+
+  header {
+    top: 0;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 8px 10px;
+    font-size: 14px;
+  }
+
+  .hero-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .hero p {
+    margin: auto;
+  }
+
+  .actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .what {
+    padding: 32px;
+  }
+
+  .workflow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets & large phones (768px and below) */
+@media (max-width: 768px) {
+
+  section {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .cta {
+    padding: 32px;
+    margin: 24px 0;
+  }
+}
+
+/* Mobile phones (576px and below) */
+@media (max-width: 576px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 24px 16px;
+  }
+
+  .hero-box {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .what img {
+    width: 100%;
+    margin-left: 0;
+     box-shadow: 10px 10px 20px rgba(129, 235, 247, 0.684);
+  }
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+  
+
+    <!-- Header -->
+    <div class="home">
+      <strong><span style="color: #15cac4;">Anim</span>Edu</strong>
+      <nav>
+        <a href="index.html">Home</a>
+       
+        <a href="3dAnim.html">3D Animation</a>
+         <a>Resources</a>
+        <a>Contact</a>
+        <a class="login">Log In</a>
+      </nav>
+    </div>
+</header>
+
+<section class="hero">
+  <div class=" hero-box">
+    <div>
+      
+      <h1>The Art of <span>2D Animation</span></h1>
+      <p>Bringing flat worlds to life. Discover the techniques, history, and magic behind two-dimensional movement.</p>
+      <div class="actions">
+        <button style="border-color:cyan;" class="btn primary">Start Learning</button>
+        <button class="btn secondary">View Syllabus</button>
+      </div>
+    </div>
+    <img src="Gallery/2danim.png" alt="Hero Art">
+  </div>
+</section>
+
+<section>
+  <div class="container what">
+    <div>
+      
+      <h2>What is 2D Animation?</h2>
+
+       <img src="Gallery/2danimation.png" alt="Illustration">
+
+      <p style="margin-top: 3%;text-align: justify;">
+      2D animation is a form of animation in which characters, objects, and environments are created and animated in a two-dimensional space, meaning they have only height and width and do not possess real depth like three-dimensional objects. In 2D animation, movement is created by displaying a sequence of images or drawings in rapid succession, with each frame showing slight changes from the previous one to give the illusion of motion. This type of animation can be produced using traditional hand-drawn techniques, where each frame is drawn individually, or through modern digital methods that use computer software to draw, rig, and animate characters. 2D animation is widely used in cartoons, television shows, films, educational content, advertisements, video games, and explainer videos because of its expressive artistic style, flexibility, and relatively lower production cost compared to 3D animation. It allows animators to emphasize creativity, emotion, and storytelling through stylized visuals, making it one of the most popular and enduring forms of animation.
+      </p>
+    </div>
+   
+  </div>
+</section>
+
+<section class="container">
+  <h2 class="section-title">Key Characteristics</h2>
+  <div class="grid">
+    <div class="card">
+      <img style="width: 210px; border-radius: 15px;" src="Gallery/flat.png">
+   <h4>Flat Perspective</h4><p>X & Y axis movement with depth illusion.</p></div>
+    <div class="card">
+       <img style="width: 210px;border-radius: 15px; " src="Gallery/physically.png">
+      <h4>Stylized Physics</h4><p>Expressive motion over realism.</p></div>
+    <div class="card">
+      <img style="width: 210px;border-radius: 15px; " src="Gallery/frame.png">
+      <h4>Frame Rate Control</h4><p>12–24 FPS artistic timing.</p></div>
+    <div class="card">
+      <img style="width: 210px;border-radius: 15px; " src="Gallery/artistic.png">
+      <h4>Artistic Freedom</h4><p>Unlimited visual styles.</p></div>
+    <div class="card">
+      <img style="width: 210px;border-radius: 15px; " src="Gallery/lineart.png">
+      <h4>Line Art & Color</h4><p>Traditional outlines and fills.</p></div>
+    <div class="card">
+      <img style="width: 210px;border-radius: 15px; " src="Gallery/vector.png">
+      <h4>Vector vs Raster</h4><p>Scalable or pixel-based assets.</p></div>
+  </div>
+</section>
+
+<section class="container">
+  <h2 style="margin-top:3% ;" class="section-title">The 2D Workflow</h2>
+  <div class="workflow">
+    <div class="step"><div class="step-circle">1</div>Storyboard</div>
+    <div class="step"><div class="step-circle">2</div>Keyframes</div>
+    <div class="step"><div class="step-circle">3</div>In-Betweening</div>
+    <div class="step"><div class="step-circle">4</div>Clean Up</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2 style="margin-top:3% ;"class="section-title">Masterpiece Showcase</h2>
+  <div class="showcase">
+    <div class="show-card"><img src="Gallery/laptop.gif"></div>
+    <div class="show-card"><img src="Gallery/walk.gif"></div>
+    <div class="show-card"><img src="Gallery/batminton.gif"></div>
+    <div class="show-card"><img src="Gallery/ani2.gif"></div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="cta">
+     <h2 style="color: #090909;">Ready to start animating?</h2>
+    <p>Join thousands of students learning the fundamentals of 2D animation today.</p>
+    <button style="border-color: #affaf8;" class="btn">Get Started for Free</button>
+  </div>
+</section>
+
+<footer>
+  
+</footer>
+
+
+<script>
+$(window).on("scroll",function(){
+  $(".card,.show-card").each(function(){
+    if($(window).scrollTop()+$(window).height()>$(this).offset().top+120){
+      $(this).css({opacity:1,transform:"translateY(0)"})
+    }
+  })
+})
+$(".card,.show-card").css({
+  opacity:0,
+  transform:"translateY(40px)",
+  transition:"0.6s ease"
+})
+
+$(window).on("scroll load", function(){
+  $(".fade").each(function(){
+    let top = $(this).offset().top;
+    let winTop = $(window).scrollTop() + $(window).height() - 100;
+    if(winTop > top){
+      $(this).addClass("show");
+    }
+  });
+});
+
+
+
+</script>
+
+</body>
+</html>

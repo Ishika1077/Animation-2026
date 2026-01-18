@@ -12,7 +12,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Inter, sans-serif;
+  font-family:'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +35,7 @@ body {
   background: #ffffff;
   padding: 28px 22px;
   border-right: 1px solid #e6e9f0;
+  
 }
 
 .logo {
@@ -274,9 +276,8 @@ img {
 
 
 
-/* ========================= */
 /* LARGE DESKTOP (1200px+) */
-/* ========================= */
+
 @media (min-width: 1200px) {
   .main {
     padding: 40px 60px 80px;
@@ -287,9 +288,9 @@ img {
   }
 }
 
-/* ========================= */
+
 /* LAPTOP / SMALL DESKTOP */
-/* ========================= */
+
 @media (max-width: 1199px) {
   .hero {
     grid-template-columns: 1fr 1fr;
@@ -305,9 +306,8 @@ img {
   }
 }
 
-/* ========================= */
 /* TABLET (≤ 960px) */
-/* ========================= */
+
 @media (max-width: 960px) {
   .app {
     grid-template-columns: 1fr;
@@ -352,9 +352,9 @@ img {
   }
 }
 
-/* ========================= */
+
 /* MOBILE LARGE (≤ 600px) */
-/* ========================= */
+
 @media (max-width: 600px) {
   .main {
     padding: 20px;
@@ -390,9 +390,9 @@ img {
   }
 }
 
-/* ========================= */
+
 /* SMALL MOBILE (≤ 400px) */
-/* ========================= */
+
 @media (max-width: 400px) {
   .hero h1 {
     font-size: 22px;
@@ -453,9 +453,9 @@ img {
     <div class="header">
       <strong><span style="color: #15cac4;">Anim</span>Edu</strong>
       <nav>
-        <a>Home</a>
+        <a href="index.html">Home</a>
        
-        <a>Types of Animation</a>
+        <a href="Animation.html">Types of Animation</a>
          <a>Resources</a>
         <a>Contact</a>
         <a class="login">Log In</a>
@@ -642,5 +642,18 @@ img {
   </main>
 </div>
 
+
+<script>
+
+  $(window).on("scroll load", function(){
+  $(".fade").each(function(){
+    let top = $(this).offset().top;
+    let winTop = $(window).scrollTop() + $(window).height() - 100;
+    if(winTop > top){
+      $(this).addClass("show");
+    }
+  });
+});
+</script>
 </body>
 </html>
