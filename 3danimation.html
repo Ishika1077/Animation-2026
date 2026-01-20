@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>  3D Animation</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+:root{
+  --primary:#15cac4;
+  --secondary:#affaf8;
+  --dark:#0f1220;
+  --light:#e0f7fa;
+  --text:#6b7280;
+  --card:#fff;
+  --radius:20px;
+  --shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+
+
+   @keyframes ani1
+  {
+    from{opacity:0 }
+    to{opacity:1}
+  }
+
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+
+    body 
+    {
+       background:#fefdfd; 
+       color:#222; 
+       animation:ani1 2s;
+      }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 24px;
+}
+    
+    header {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:15px;
+      z-index:100;
+    }
+
+    .home {
+      width:90%;
+      max-width:1350px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+   
+   
+    nav a 
+    {
+      color:#6b7280;
+      margin-left:20px;
+      font-size:14px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px;  
+    }
+   
+
+    nav a:hover {
+  text-decoration:underline #affaf8;
+  color: #15cac4;
+  font-size: 16px;
+ 
+}
+
+
+
+.login {
+  background:#affaf8 ;
+  
+  color:#15cac4 ;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* ================= HERO ================= */
+
+.hero-section {
+    position: relative;
+
+    margin: auto;
+    width: 85%;
+    height: 500px; 
+        margin-top: 60px;
+    background: url(Gallery/3danimate.png) no-repeat center center/cover;
+    border-radius:26px;
+  padding:100px;
+    display: flex;
+  
+    justify-content: center;
+   
+    color: white;
+ 
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.651);
+     border-radius:26px;
+    z-index: 1;
+}
+
+.hero-content {
+    
+    z-index: 2;
+    max-width: 500px;
+    margin-left: -450px;
+}
+
+.hero-content h1 {
+    font-size:52px;
+  margin:16px 0;
+  line-height:1.1;
+}
+
+.hero-content span { 
+  color:#15cac4;
+}
+
+.hero-content p {
+    color:#c8f2f2;
+  max-width:520px;
+}
+
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all .3s ease;
+}
+
+.btn.primary {
+  background: #15cac4;
+  color: #fff;
+  border-color: #15cac4;
+}
+
+.btn.secondary {
+  background:  #affaf8;
+  color: #15cac4;
+    border-color: #15cac4;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(129, 235, 247, 0.684);
+}
+
+
+
+@keyframes spin{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+/* ================= SECTIONS ================= */
+section{
+   padding:32px 50px;
+}
+
+.section-title{
+  margin-bottom:28px;
+  margin-top: 15px;
+  text-align:center;
+}
+
+
+
+/* ================= CARDS ================= */
+.card-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+#pic{
+width: 350px; 
+border-radius: 15px;
+margin-left:20px;
+margin-bottom: 10px; 
+
+}
+#pic:hover{
+ box-shadow: 10px 10px 30px rgba(129, 235, 247, 0.684);}
+.icon{
+  width:54px;
+  height:54px;
+  border-radius:14px;
+  background:#15cac4;
+  margin-bottom:20px;
+}
+
+/* ================= PIPELINE ================= */
+.pipeline{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+  margin-top:40px;
+}
+
+.step{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+/* ================= INDUSTRY ================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+  margin-top:40px;
+}
+
+.thumb{
+  height:180px;
+  border-radius:18px;
+  background:#e0f7fa;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:600;
+  color:#555;
+}
+
+/* ================= TOOLS ================= */
+.tools{
+ 
+  border-radius:28px;
+  padding:60px;
+}
+
+.tool-grid{
+  
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+
+.tool{
+  background:#e0f7fa;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  padding:40px;
+  text-align:center;
+  color:#777;
+}
+
+/* ================= ANIMATIONS ================= */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.show{
+  opacity:1;
+  transform:none;
+  transition:all 1s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .hero-actions{justify-content:center}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  
+
+    <!-- Header -->
+    <div class="home">
+      <strong><span style="color: #15cac4;">Anim</span>Edu</strong>
+      <nav>
+        <a href="index.html">Home</a>
+       
+        <a href="2danimation.html">2D Animation</a>
+         <a>Resources</a>
+        <a>Contact</a>
+        <a class="login">Log In</a>
+      </nav>
+    </div>
+</header>
+
+<section class="hero-section">
+ <div class="hero-content">
+  
+    <h1>The World of <span>3D Animation</span></h1>
+    <p>
+      Creating life in a digital three-dimensional space. Dive into the art of modeling,
+      rigging, and rendering to bring imagination to reality.
+    </p>
+    <div class="actions">
+        <button style="border-color:cyan;" class="btn primary">Start Learning</button>
+        <button class="btn secondary">View Syllabus</button>
+      </div>
+  </div>
+
+ 
+  
+</section>
+
+<section>
+  <h2 class="section-title">What is 3D Animation?</h2>
+  
+  <p style=" width:700px;margin: auto;">
+    Unlike 2D animation which occurs on a flat plane (X and Y axis),
+    3D animation creates movement within a three-dimensional digital environment,
+    utilizing the Z-axis for depth.
+  </p>
+</div>
+  <div class="card-grid">
+    <div class="card">
+      <img id="pic"src="Gallery/z-axis.png" >
+      <h3>Z-Axis Depth</h3>
+      <p>Adds volume, height and width, creating a navigable space.</p>
+    </div>
+    
+    <div class="card">
+      <img  id="pic" src="Gallery/digitalmesh.png" >
+      <h3>Digital Mesh</h3>
+      <p>Wireframe structures of polygons defining object shapes.</p>
+    </div>
+    <div class="card">
+      <img  id="pic" src="Gallery/render.png" >
+      <h3>Rendering</h3>
+      <p>Lighting, shadows, and physics processed by the computer.</p>
+    </div>
+  </div>
+</section>
+
+<section >
+  <h2 class="section-title">The 3D Pipeline</h2>
+
+  <div class="pipeline">
+    <div class="step"><strong>1. Modeling</strong><br>Sculpting the object</div>
+    <div class="step"><strong>2. Rigging</strong><br>Adding bones & joints</div>
+    <div class="step"><strong>3. Animation</strong><br>Creating movement</div>
+    <div class="step"><strong>4. Rendering</strong><br>Final image output</div>
+  </div>
+</section>
+
+<section >
+  <h2 class="section-title">Industry Examples</h2>
+
+  <div class="gallery">
+    <div class="thumb">Motion Graphics</div>
+    <div class="thumb">Feature Film</div>
+    <div class="thumb">Video Games</div>
+  </div>
+</section>
+
+<section class="tools fade">
+  <h2 class="section-title">Tools of the Trade</h2>
+  <p style="text-align: center;">software used by professionals worldwide.</p>
+
+  <div class="tool-grid">
+    <div class="tool">Blender<br><small>Free / Open Source</small></div>
+    <div class="tool">Maya<br><small>Industry Standard</small></div>
+    <div class="tool">Cinema 4D<br><small>Motion Graphics</small></div>
+    <div class="tool">ZBrush<br><small>Digital Sculpting</small></div>
+  </div>
+</section>
+
+<footer>
+ 
+</footer>
+
+<script>
+$(window).on("scroll load", function(){
+  $(".fade").each(function(){
+    let top = $(this).offset().top;
+    let winTop = $(window).scrollTop() + $(window).height() - 100;
+    if(winTop > top){
+      $(this).addClass("show");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
