@@ -8,6 +8,13 @@
 <style>
 
 
+ @keyframes ani1
+  {
+    from{opacity:0 }
+    to{opacity:1}
+  }
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -87,29 +94,40 @@ body {
 }
 
 .header nav {
-  display: flex;
-  gap: 26px;
-  align-items: center;
-}
+      display: flex;
+      gap:26px;
+      color:#6b7280;
+      font-size:14px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      border-radius: 10px;  
+    }
+   
+
 
 .header nav a {
-  text-decoration: none;
-  color: #6b7280;
-  font-size: 14px;
-}
+  
+      color:#6b7280;
+      font-size:14px;
+      text-decoration:none;
+      font-weight:500;
+      border-radius: 10px;  
+    }
+
 
 .header nav a:hover {
-  text-decoration:underline #affaf8;
+ text-decoration:underline #affaf8;
   color: #15cac4;
   font-size: 16px;
  
 }
 
+
 .login {
-  background:#affaf8 ;
-  
+  background:#affaf8 ; 
   color:#15cac4 ;
-  padding: 10px 18px;
+  padding: 8px 15px;
   border-radius: 10px;
   font-size: 13px;
 }
@@ -356,6 +374,17 @@ img {
 /* MOBILE LARGE (≤ 600px) */
 
 @media (max-width: 600px) {
+
+  body {
+    font-size: 14px;
+  }
+  
+ .login{
+
+     padding: 5px 8px;
+    font-size: 10px;
+  }
+
   .main {
     padding: 20px;
   }
@@ -638,9 +667,6 @@ img {
       </div>
       </div>
     </section>
-
-  </main>
-</div>
 
 
 <script>

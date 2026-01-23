@@ -247,9 +247,95 @@ margin-left: 30px;
 .cta p{margin:16px 0 32px;}
 
 
+
+
 /* ================= FOOTER ================= */
+.site-footer {
+  background: #045f5c;
+  color: #cbd5f5;
+  padding: 70px 40px 30px;
+}
 
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
 
+.footer-brand h3 {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  font-size: 14px;
+  color: #c8f2f2;
+}
+
+.footer-links h4,
+.footer-extra h4 {
+  margin-bottom: 14px;
+  color: #e0e7ff;
+  font-size: 16px;
+}
+
+.footer-links ul,
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-extra li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-extra a {
+  text-decoration: none;
+  color: #bccbcc;
+  font-size: 14px;
+  position: relative;
+  transition: .3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background:#15cac4 ;
+  transition: .3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* REVEAL ANIMATION */
+.reveal-footer {
+  opacity: 0;
+  transform: translateY(40px);
+}
 
 
 /* ================= RESPONSIVE DESIGN ================= */
@@ -431,6 +517,9 @@ margin-left: 30px;
         <a href="index.html">Home</a>
        
         <a href="2danimation.html">2D Animation</a>
+        <a href="3danimation.html">3D Animation</a>
+        <a href="Stopmotion.html">Stop Motion</a>
+        <a href="VFX.html">VFX/Motion</a>
          <a>Resources</a>
         <a>Contact</a>
         <a class="login">Log In</a>
@@ -485,14 +574,19 @@ margin-left: 30px;
     </div>
 
     <div class="card">
-      <div class="card-img"></div>
+      <div class="card-img">
+        <a href="mainstopmotion.html">
+        <img style="width: 270px; border-radius: 15px;" src="Gallery/stop motion.png"></a></div>
       <h3>Stop Motion</h3>
       <p>Physical objects moved in small increments between frames to create the illusion of movement.</p>
       <small>Unique Examples: Coraline, Wallace & Gromit</small>
     </div>
 
     <div class="card">
-      <div class="card-img"></div>
+      <div class="card-img">
+        <a href="VFX.html">
+        <img style="width: 270px; border-radius: 15px;" src="Gallery/VFX.png"></a>
+      </div>
       <h3>VFX & Motion</h3>
       <p>Digital effects and animated graphic design. Essential for interfaces, titles, and live-action integration.</p>
       <small>Commercial Examples: Marvel VFX, Movie Titles</small>
@@ -510,8 +604,45 @@ margin-left: 30px;
   </div>
 </section>
 
-<footer>
-  
+<footer class="site-footer reveal-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3><span style="color: #15cac4;">Anim</span>Edu</h3>
+      <p>
+        Learn animation from fundamentals to professional techniques.
+        Explore motion through creativity, technology, and storytelling.
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-links">
+      <h4>Learn Animation</h4>
+      <ul>
+        <li><a href="index.html">12 Principles of Animation</a></li>
+        <li><a href="Animation.html">Types of Animation</a></li>
+        <li><a href="2danimation.html">2D Animation</a></li>
+        <li><a href="3danimation.html">3D Animation</a></li>
+        <li><a href="mainstopmotion.html">Stop Motion</a></li>
+        <li><a href="VFX.html">VFX / Motion Graphics</a></li>
+      </ul>
+    </div>
+
+    <!-- EXTRA -->
+    <div class="footer-extra">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">Demos</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+ 
 </footer>
 
 
@@ -534,7 +665,31 @@ $(document).ready(function(){
   );
 });
 
+// Scroll reveal animation
+$(window).on("scroll", function () {
+  const footerTop = $(".site-footer").offset().top;
+  const scrollPos = $(window).scrollTop();
+  const windowHeight = $(window).height();
 
+  if (footerTop < scrollPos + windowHeight - 100) {
+    $(".site-footer").css({
+      opacity: 1,
+      transform: "translateY(0)",
+      transition: "0.9s ease"
+    });
+  }
+});
+
+// Highlight active page link
+const currentPage = window.location.pathname.split("/").pop();
+$(".footer-links a").each(function () {
+  if ($(this).attr("href") === currentPage) {
+    $(this).css({
+      color: "#fff",
+      fontWeight: "600"
+    });
+  }
+});
 
 </script>
 

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stop Motion Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+ 
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+
+<style>
+   
+    @keyframes ani1
+  {
+    from{opacity:0 }
+    to{opacity:1}
+  }
+
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+
+    body 
+    {
+       background:#fefdfd; 
+       color:#222; 
+       animation:ani1 2s;
+      }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 24px;
+}
+    
+    header {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:15px;
+      z-index:100;
+    }
+
+    .home {
+      width:90%;
+      max-width:1350px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+   
+   
+    nav a 
+    {
+      color:#6b7280;
+      margin-left:20px;
+      font-size:14px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px;  
+    }
+   
+
+    nav a:hover {
+  text-decoration:underline #affaf8;
+  color: #15cac4;
+  font-size: 16px;
+ 
+}
+
+
+
+.login {
+  background:#affaf8 ;
+  
+  color:#15cac4 ;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+
+
+/* ================= HERO ================= */
+.hero{
+  padding:64px 100px;
+}
+.hero-box{
+  background:#0c0c0c;
+  border-radius:26px;
+  padding:64px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:48px;
+  align-items:center;
+  box-shadow:0 18px 40px rgba(0,0,0,.08);
+}
+
+.hero h1{
+  font-size:52px;
+  margin:16px 0;
+  color: #fff;
+  line-height:1.1;
+}
+.hero h1 span{
+  color:#15cac4;
+}
+.hero p{
+  color:#ebfafb;
+  max-width:520px;
+}
+.hero-actions{
+  margin-top:32px;
+  display:flex;
+  gap:16px;
+}
+.hero img{
+  width:100%;
+  border-radius:20px;
+   box-shadow: 0 6px 30px rgba(129, 235, 247, 0.684);
+}
+
+
+
+
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all .3s ease;
+}
+
+.btn.primary {
+  background: #15cac4;
+  color: #fff;
+  border-color: #15cac4;
+}
+
+.btn.secondary {
+  background:  #affaf8;
+  color: #15cac4;
+    border-color: #15cac4;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(129, 235, 247, 0.684);
+}
+
+
+
+
+.section {
+  padding: 30px 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2{
+  
+ 
+ margin-bottom: 30px;
+  text-align:center;
+}
+
+.info-card {
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.info-card img {
+  width: 240px;
+  border-radius: 14px;
+}
+
+.tags span {
+  background: #e0f7fa;
+  padding: 6px 12px;
+  border-radius: 14px;
+  margin-right: 6px;
+  font-size: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+
+.pic{
+  width: 300px;
+   border-radius: 15px;
+   padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+     transition: .4s;
+}
+
+.pic:hover {
+ transform: scale(1.05);
+}
+
+
+
+.card, .media-card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.media-card img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.steps .step {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.steps span {
+  background: #affaf8;
+  color: black;
+  border-radius: 30%;
+  padding: 8px;
+ width: 3%;
+ height: 3%;
+ text-align: center;
+ font-weight: 500;
+}
+
+.cta{
+  background:#e0f7fa;
+  padding:52px;
+  margin: 5%;
+  border-radius:28px;
+  text-align:center;
+  color:#6b7280;
+}
+.cta p{margin:16px 0 32px;}
+
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #045f5c;
+  color: #cbd5f5;
+  padding: 70px 40px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer-brand h3 {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  font-size: 14px;
+  color: #c8f2f2;
+}
+
+.footer-links h4,
+.footer-extra h4 {
+  margin-bottom: 14px;
+  color: #e0e7ff;
+  font-size: 16px;
+}
+
+.footer-links ul,
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-extra li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-extra a {
+  text-decoration: none;
+  color: #bccbcc;
+  font-size: 14px;
+  position: relative;
+  transition: .3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background:#15cac4 ;
+  transition: .3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* REVEAL ANIMATION */
+.reveal-footer {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hover-float:hover {
+  transform: translateY(-10px);
+  transition: .3s;
+}
+
+.hover-zoom img {
+  transition: .4s;
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+</style>
+
+
+
+
+
+<body>
+
+<header>
+  
+
+    <!-- Header -->
+    <div class="home">
+      <strong><span style="color: #15cac4;">Anim</span>Edu</strong>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="2danimation.html">2D Animation</a>
+        <a href="3danimation.html">3D Animation</a>
+         <a href="VFX.html">VFX & Motion</a>
+         <a>Resources</a>
+        <a>Contact</a>
+        <a class="login">Log In</a>
+      </nav>
+    </div>
+</header>
+
+<section class="hero">
+  <div class=" hero-box">
+    <div>
+       <h1>Stop Motion <span>Animation</span></h1>
+     
+      <p>   The art of physical movement. Discover the magic behind bringing
+      inanimate objects to life, one frame at a time.</p>
+      <div class="actions">
+        <button style="border-color:cyan;" class="btn primary">Start Learning</button>
+        <button class="btn secondary">View Syllabus</button>
+      </div>
+    </div>
+    <img src="Gallery/stop motion.png" alt="Hero Art">
+  </div>
+</section>
+
+
+<section class="section reveal">
+  <h2>What is Stop Motion?</h2>
+
+  <div class="info-card">
+    <img src="Gallery/movement.png" alt="">
+    <div>
+      <h3>The Art of Physical Movement</h3>
+      <p style="margin-bottom: 15px;">
+        Stop motion is an animated filmmaking technique in which objects are
+        physically manipulated in small increments between frames. When played
+        back rapidly, the objects appear to move independently.
+      </p>
+      <div class="tags">
+        <span>Object Animation</span>
+        <span>Claymation</span>
+        <span>Pixilation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <h2>Key Characteristics</h2>
+
+  <div class="grid">
+    <div class="card hover-float">
+      <img  class="pic"  src="Gallery/rate time.png">
+      <h4>Frame Rate (FPS)</h4>
+      <p>
+        Typically shot at 12 or 24 frames per second. Shooting on “twos”
+        creates a distinctive handcrafted charm.
+      </p>
+    </div>
+
+    <div class="card hover-float">
+        <img  class="pic"  src="Gallery/material.png">
+      <h4>Tactile Materials</h4>
+      <p>
+        Uses real-world objects like clay, puppets, paper cutouts,
+        or LEGO. Imperfections add character.
+      </p>
+    </div>
+
+    <div class="card hover-float">
+        <img  class="pic"  src="Gallery/rate time.png">
+      <h4>Controlled Lighting</h4>
+      <p>
+        Requires consistent lighting conditions. Even slight flickers
+        can affect the final animation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <h2>How It Works</h2>
+
+  <div class="steps">
+    <div class="step">
+      <span>1</span>
+      <div>
+        <h4>Concept & Storyboard</h4>
+        <p>
+          Every shot is meticulously planned. Timing is calculated down
+          to the exact frame.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span>2</span>
+      <div>
+        <h4>Fabrication</h4>
+        <p>
+          Puppets and sets are built. Armatures are used to hold poses
+          for long periods.
+        </p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span>3</span>
+      <div>
+        <h4>Shooting</h4>
+        <p>
+          The animator moves the object slightly, captures a frame,
+          and repeats the process thousands of times.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <h2>Famous Examples</h2>
+
+  <div class="grid">
+    <div class="media-card hover-zoom">
+      <img src="Gallery/example1.png">
+      <h5>Coraline</h5>
+      <p>Laika Studios · 2009</p>
+    </div>
+
+    <div class="media-card hover-zoom">
+      <img src="Gallery/example2.png">
+      <h5>Wallace & Gromit</h5>
+      <p>Aardman · 1989+</p>
+    </div>
+
+    <div class="media-card hover-zoom">
+      <img src="Gallery/example3.png">
+      <h5>Fantastic Mr. Fox</h5>
+      <p>Wes Anderson · 2009</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="cta">
+     <h2 style="color: #090909;">Ready to start animating?</h2>
+    <p>Join thousands of students learning the fundamentals of 2D animation today.</p>
+    <button style="border-color: #affaf8;" class="btn">Get Started for Free</button>
+  </div>
+</section>
+
+<footer class="site-footer reveal-footer">
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3><span style="color: #15cac4;">Anim</span>Edu</h3>
+      <p>
+        Learn animation from fundamentals to professional techniques.
+        Explore motion through creativity, technology, and storytelling.
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-links">
+      <h4>Learn Animation</h4>
+      <ul>
+        <li><a href="index.html">12 Principles of Animation</a></li>
+        <li><a href="Animation.html">Types of Animation</a></li>
+        <li><a href="2danimation.html">2D Animation</a></li>
+        <li><a href="3danimation.html">3D Animation</a></li>
+        <li><a href="mainstopmotion.html">Stop Motion</a></li>
+        <li><a href="VFX.html">VFX / Motion Graphics</a></li>
+      </ul>
+    </div>
+
+    <!-- EXTRA -->
+    <div class="footer-extra">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">Demos</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+ 
+</footer>
+
+<script >
+    $(window).on("scroll", function () {
+  $(".reveal").each(function () {
+    const top = $(this).offset().top;
+    const winTop = $(window).scrollTop();
+    if (top < winTop + 700) {
+      $(this).css({
+        opacity: 1,
+        transform: "translateY(0)",
+        transition: "0.8s ease"
+      });
+    }
+  });
+});
+
+// Scroll reveal animation
+$(window).on("scroll", function () {
+  const footerTop = $(".site-footer").offset().top;
+  const scrollPos = $(window).scrollTop();
+  const windowHeight = $(window).height();
+
+  if (footerTop < scrollPos + windowHeight - 100) {
+    $(".site-footer").css({
+      opacity: 1,
+      transform: "translateY(0)",
+      transition: "0.9s ease"
+    });
+  }
+});
+
+// Highlight active page link
+const currentPage = window.location.pathname.split("/").pop();
+$(".footer-links a").each(function () {
+  if ($(this).attr("href") === currentPage) {
+    $(this).css({
+      color: "#fff",
+      fontWeight: "600"
+    });
+  }
+});
+
+</script>
+</body>
+</html>
