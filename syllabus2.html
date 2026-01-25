@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anim syllabus </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    
+
+ @keyframes ani1
+  {
+    from{opacity:0 }
+    to{opacity:1}
+  }
+
+    * { 
+      margin:0; 
+      padding:0; 
+      box-sizing:border-box; 
+      font-family:'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+
+    body 
+    {
+       background:#fefdfd; 
+       color:#fff; 
+       animation:ani1 2s;
+      }
+
+    
+    header {
+      background:#ffffff;
+      padding:20px 0;
+      box-shadow:0 2px 20px rgba(0,0,0,0.08);
+      position:sticky;
+      top:15px;
+      z-index:100;
+    }
+
+    strong{
+        color: #090909;
+    }
+
+    .home {
+      width:90%;
+      max-width:1350px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+   
+   
+    nav a 
+    {
+      color:#484c52;
+      margin-left:20px;
+      font-size:14px;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+      position: relative;
+      border-radius: 10px;  
+    }
+   
+
+    nav a:hover {
+  text-decoration:underline #affaf8;
+  color: #15cac4;
+  font-size: 16px;
+ 
+}
+
+
+
+.login {
+  background:#affaf8 ;
+  
+  color:#15cac4 ;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* MAIN */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.learning-path h1 {
+    color: black;
+  font-size: 46px;
+}
+
+.subtitle {
+  color: #242525;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+.btn-outline{
+    padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all .3s ease;
+  background:#affaf8 
+    
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(#b6eeee,#30f4f4 );
+}
+
+.step {
+  display: flex;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all .6s ease;
+}
+
+.step.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.dot.pink { background: #15cac4; }
+.dot.purple { background: #15cac4; }
+.dot.cyan { background: #15cac4; }
+.dot.white { background: #15cac4; }
+
+/* CARDS */
+.card {
+  background: #090909;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+}
+
+.card.pink { border-left: 4px solid #affaf8; }
+.card.purple { border-left: 4px solid #affaf8; }
+.card.cyan { border-left: 4px solid #affaf8; }
+.card.white { border-left: 4px solid #affaf8; }
+
+.tags span {
+  display: inline-block;
+  font-size: 11px;
+  background: #e0f7fa;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin: 6px 6px 0 0;
+}
+
+.cta{
+  background:#e0f7fa;
+  padding:52px;
+  margin: 5%;
+  border-radius:28px;
+  text-align:center;
+  color:#6b7280;
+}
+.cta p{margin:16px 0 32px;}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all .3s ease;
+  
+}
+
+
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(129, 235, 247, 0.684);
+}
+
+
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #045f5c;
+  color: #cbd5f5;
+  padding: 70px 40px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer-brand h3 {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  font-size: 14px;
+  color: #c8f2f2;
+}
+
+.footer-links h4,
+.footer-extra h4 {
+  margin-bottom: 14px;
+  color: #e0e7ff;
+  font-size: 16px;
+}
+
+.footer-links ul,
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-extra li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-extra a {
+  text-decoration: none;
+  color: #bccbcc;
+  font-size: 14px;
+  position: relative;
+  transition: .3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background:#15cac4 ;
+  transition: .3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+
+
+</style>
+<body>
+
+<header>
+  
+
+    <!-- Header -->
+    <div class="home">
+      <strong><span style="color: #15cac4;">Anim</span>Edu</strong>
+      <nav>
+        <a href="index.html">Home</a>
+       <a href="Animation.html">Types of Animation</a>
+        
+
+         <a href="syllabus2.html">Syllabus</a>
+        <a href="#footer">Contact</a>
+        <a class="login">Log In</a>
+      </nav>
+    </div>
+</header>
+
+<main class="container">
+
+  <section class="learning-path">
+
+    <h1>Learning Path</h1>
+    <p class="subtitle">
+      A step-by-step creative odyssey from foundational principles to professional 3D rendering.
+    </p>
+
+    <button class="btn-outline">⬇ Full Syllabus PDF</button>
+
+    <div class="timeline">
+
+      <div class="step">
+        <span class="dot pink"></span>
+        <div class="card pink">
+          <small>WEEKS 1–3</small>
+          <h3>Principles of Animation</h3>
+          <p>Master the 12 core principles including squash and stretch, anticipation, and follow-through.</p>
+          <div class="tags">
+            <span>Squash & Stretch</span>
+            <span>Timing</span>
+            <span>Staging</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="dot purple"></span>
+        <div class="card purple">
+          <small>WEEKS 4–6</small>
+          <h3>Shape & Form: 3D Modeling</h3>
+          <p>Learn professional topology, edge-flow, and organic modeling techniques.</p>
+          <div class="tags">
+            <span>Sub-D</span>
+            <span>Topology</span>
+            <span>UV Unwrapping</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="dot cyan"></span>
+        <div class="card cyan">
+          <small>WEEKS 7–9</small>
+          <h3>Bringing Life: Character Rigging</h3>
+          <p>Build skeletal systems and control rigs for expressive animation.</p>
+          <div class="tags">
+            <span>IK / FK</span>
+            <span>Skinning</span>
+            <span>Facial Controls</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="dot white"></span>
+        <div class="card white">
+          <small>WEEKS 10–12</small>
+          <h3>Cinematic Finish</h3>
+          <p>Lighting, PBR texturing, and final rendering for studio-quality scenes.</p>
+          <div class="tags">
+            <span>PBR</span>
+            <span>Raytracing</span>
+            <span>Compositing</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   <section class="container">
+  <div class="cta">
+     <h2 style="color: #090909;">Ready to start animating?</h2>
+    <p>Join thousands of students learning the fundamentals of 2D animation today.</p>
+    <button style="border-color: #affaf8;" class="btn">Get Started for Free</button>
+  </div>
+</section>
+
+  </section>
+
+</main>
+
+ <footer class="site-footer reveal-footer">
+  <div id="footer"></div>
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3><span style="color: #15cac4;">Anim</span>Edu</h3>
+      <p>
+        Learn animation from fundamentals to professional techniques.
+        Explore motion through creativity, technology, and storytelling.
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-links">
+      <h4>Learn Animation</h4>
+      <ul>
+        <li><a href="index.html">12 Principles of Animation</a></li>
+        <li><a href="Animation.html">Types of Animation</a></li>
+        <li><a href="2danimation.html">2D Animation</a></li>
+        <li><a href="3danimation.html">3D Animation</a></li>
+        <li><a href="mainstopmotion.html">Stop Motion</a></li>
+        <li><a href="VFX.html">VFX / Motion Graphics</a></li>
+      </ul>
+    </div>
+
+    <!-- EXTRA -->
+    <div class="footer-extra">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">Demos</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+ 
+</footer>
+
+
+<script>$(document).ready(function () {
+
+  $('.step').each(function (index) {
+    $(this).delay(index * 250).queue(function (next) {
+      $(this).addClass('active');
+      next();
+    });
+  });
+
+  $('.card').hover(
+    function () {
+      $(this).css('box-shadow', '0 10px 20px rgba(129, 235, 247, 0.684)');
+    },
+    function () {
+      $(this).css('box-shadow', 'none');
+    }
+  );
+
+});
+</script>
+</body>
+</html>
