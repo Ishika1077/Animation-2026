@@ -292,6 +292,161 @@
   color: #64748b;
 }
 
+/* ===================================== */
+/* LARGE DESKTOPS */
+/* ===================================== */
+@media (min-width:1400px){
+  .container{
+    max-width:1100px;
+  }
+
+  .learning-path h1{
+    font-size:54px;
+  }
+}
+
+/* ===================================== */
+/* DESKTOP / LAPTOP */
+/* ===================================== */
+@media (max-width:1200px){
+
+  .container{
+    padding:50px 24px;
+  }
+
+  .learning-path h1{
+    font-size:42px;
+  }
+}
+
+/* ===================================== */
+/* TABLETS */
+/* ===================================== */
+@media (max-width:992px){
+
+  header{
+    top:0;
+    padding:14px 0;
+  }
+
+  .home{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:6px 10px;
+  }
+
+  .timeline{
+    padding-left:30px;
+  }
+
+  .timeline::before{
+    left:8px;
+  }
+
+  .step{
+    flex-direction:column;
+  }
+
+  .dot{
+    margin-bottom:12px;
+  }
+
+  
+}
+
+/* ===================================== */
+/* LARGE MOBILES */
+/* ===================================== */
+@media (max-width:768px){
+
+  .container{
+    padding:40px 20px;
+  }
+
+  .learning-path h1{
+    font-size:32px;
+  }
+
+  .subtitle{
+    font-size:14px;
+  }
+
+  .timeline{
+    padding-left:20px;
+  }
+
+  .timeline::before{
+    left:6px;
+  }
+
+  .cta{
+    margin:20px;
+    padding:36px;
+  }
+
+  
+}
+
+/* ===================================== */
+/* SMALL MOBILES */
+/* ===================================== */
+@media (max-width:480px){
+
+  body{
+    font-size:14px;
+  }
+
+  nav a{
+    font-size:12px;
+  }
+
+  .login{
+    padding:8px 12px;
+    font-size:12px;
+  }
+
+  .learning-path h1{
+    font-size:26px;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  .tags span{
+    font-size:10px;
+    padding:5px 8px;
+  }
+
+  .btn-outline{
+    width:100%;
+  }
+
+ 
+}
+
+/* ===================================== */
+/* VERY SMALL DEVICES */
+/* ===================================== */
+@media (max-width:360px){
+
+  .learning-path h1{
+    font-size:22px;
+  }
+
+  .cta{
+    padding:26px;
+  }
+}
 
 
 </style>

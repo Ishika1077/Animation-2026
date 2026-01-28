@@ -31,18 +31,25 @@ body {
 /*  Layout */
 
 .app {
-  display: grid;
+  display:grid;
+  
   grid-template-columns: 280px 1fr;
-  min-height: 100vh;
+  
 }
 
 /*  Sidebar */
+
+
 
 .sidebar {
   background: #ffffff;
   padding: 28px 22px;
   border-right: 1px solid #e6e9f0;
   
+}
+
+.corner{
+  position: fixed;
 }
 
 .logo {
@@ -60,8 +67,12 @@ body {
   text-transform: uppercase;
 }
 
+
+
+
 .nav a {
-  display: block;
+  display:block;
+  
   padding: 12px 14px;
   border-radius: 12px;
   font-size: 14px;
@@ -251,6 +262,88 @@ body {
   color: #6b7280;
 }
 
+/* ================= FOOTER ================= */
+.site-footer {
+  background: #045f5c;
+  color: #cbd5f5;
+  padding: 70px 40px 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer-brand h3 {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  font-size: 14px;
+  color: #c8f2f2;
+}
+
+.footer-links h4,
+.footer-extra h4 {
+  margin-bottom: 14px;
+  color: #e0e7ff;
+  font-size: 16px;
+}
+
+.footer-links ul,
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-extra li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-extra a {
+  text-decoration: none;
+  color: #bccbcc;
+  font-size: 14px;
+  position: relative;
+  transition: .3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background:#15cac4 ;
+  transition: .3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
 /*  Animations */
 
 @keyframes fadeIn {
@@ -368,6 +461,7 @@ img {
   .item:nth-child(even) {
     grid-template-columns: 1fr;
   }
+  
 }
 
 
@@ -440,14 +534,7 @@ img {
 
 
 
-/* Responsive 
 
-@media (max-width: 960px) {
-  .app { grid-template-columns: 1fr }
-  .sidebar { display: none }
-  .hero { grid-template-columns: 1fr }
-  .item { grid-template-columns: 1fr }
-}*/
 </style>
 </head>
 
@@ -457,6 +544,7 @@ img {
 
   <!-- Sidebar -->
   <aside class="sidebar">
+    <div class="corner">
     <div class="logo">Animation Basics</div>
     <h4>Principles</h4>
     <div class="nav">
@@ -472,6 +560,7 @@ img {
       <a href="#ani10">Exaggeration</a>
       <a href="#ani11">Solid Drawing</a>
       <a href="#ani12">Appeal</a>
+    </div>
     </div>
   </aside>
 
@@ -667,6 +756,49 @@ img {
       </div>
       </div>
     </section>
+
+    <footer class="site-footer reveal-footer">
+  <div id="footer"></div>
+  
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <h3><span style="color: #15cac4;">Anim</span>Edu</h3>
+      <p>
+        Learn animation from fundamentals to professional techniques.
+        Explore motion through creativity, technology, and storytelling.
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-links">
+      <h4>Learn Animation</h4>
+      <ul>
+        <li><a href="index.html">12 Principles of Animation</a></li>
+        <li><a href="Animation.html">Types of Animation</a></li>
+        <li><a href="2danimation.html">2D Animation</a></li>
+        <li><a href="3danimation.html">3D Animation</a></li>
+        <li><a href="mainstopmotion.html">Stop Motion</a></li>
+        <li><a href="VFX.html">VFX / Motion Graphics</a></li>
+      </ul>
+    </div>
+
+    <!-- EXTRA -->
+    <div class="footer-extra">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">Demos</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+ 
+</footer>
 
 
 <script>

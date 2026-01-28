@@ -375,6 +375,171 @@ h2{
   transform: scale(1.05);
 }
 
+/* ===================================== */
+/* LARGE DESKTOPS (1400px+) */
+/* ===================================== */
+@media (min-width:1400px){
+  .hero{padding:80px 140px;}
+  .hero h1{font-size:58px;}
+}
+
+/* ===================================== */
+/* DESKTOP & LAPTOP */
+/* ===================================== */
+@media (max-width:1200px){
+
+  .hero{padding:60px 60px;}
+
+  .hero-box{
+    gap:36px;
+    padding:50px;
+  }
+
+  .hero h1{font-size:46px;}
+
+  .section{padding:40px 40px;}
+}
+
+/* ===================================== */
+/* TABLETS */
+/* ===================================== */
+@media (max-width:992px){
+
+  header{
+    top:0;
+    padding:15px 0;
+  }
+
+  .home{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:6px 10px;
+  }
+
+  .hero{
+    padding:50px 40px;
+  }
+
+  .hero-box{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero p{
+    margin:auto;
+  }
+
+  .actions{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .info-card{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .info-card img{
+    margin:auto;
+    width:200px;
+  }
+
+  .steps span{
+    width:auto;
+    height:auto;
+    padding:10px 14px;
+  }
+
+  
+}
+
+/* ===================================== */
+/* LARGE MOBILES */
+/* ===================================== */
+@media (max-width:768px){
+
+  .hero{padding:40px 24px;}
+
+  .hero-box{
+    padding:36px;
+  }
+
+  .hero h1{font-size:34px;}
+
+  .section{
+    padding:30px 24px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .pic{
+    width:100%;
+  }
+
+  .cta{
+    margin:20px;
+    padding:36px;
+  }
+
+ 
+}
+
+/* ===================================== */
+/* SMALL MOBILES */
+/* ===================================== */
+@media (max-width:480px){
+
+  body{font-size:14px;}
+
+  nav a{font-size:12px;}
+
+  .login{
+    padding:8px 12px;
+    font-size:12px;
+  }
+
+  .hero h1{font-size:26px;}
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+
+  .actions{
+    gap:10px;
+  }
+
+  .section h2{
+    font-size:22px;
+  }
+
+  
+}
+
+/* ===================================== */
+/* VERY SMALL DEVICES */
+/* ===================================== */
+@media (max-width:360px){
+
+  .hero h1{font-size:22px;}
+
+  .hero-box{padding:26px;}
+
+  .cta{padding:26px;}
+}
+
+
 </style>
 
 
