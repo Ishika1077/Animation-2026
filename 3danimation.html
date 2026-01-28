@@ -437,185 +437,201 @@ margin-bottom: 0px;
   transition:all 1s ease;
 }
 
-/* ======================================== */
-/* EXTRA LARGE SCREENS (≥1400px) */
-/* ======================================== */
-@media (min-width: 1400px) {
+/* ================================================= */
+/* GLOBAL FIXES */
+/* ================================================= */
 
-  section {
-    padding: 80px 180px;
+img{
+  max-width:100%;
+  height:auto;
+}
+
+p{
+  max-width:100%;
+}
+
+section p[style*="700px"]{
+  width:100%!important;
+}
+
+/* ================================================= */
+/* EXTRA LARGE SCREENS */
+/* ================================================= */
+
+@media (min-width:1400px){
+
+  .hero-section{
+    height:580px;
   }
 
-  .hero-section {
-    height: 560px;
-    padding: 120px;
-  }
-
-  .hero-content h1 {
-    font-size: 56px;
+  section{
+    padding:80px 180px;
   }
 }
 
-/* ======================================== */
-/* DESKTOP & LARGE LAPTOPS (≤1200px) */
-/* ======================================== */
-@media (max-width: 1200px) {
+/* ================================================= */
+/* LARGE DESKTOP */
+/* ================================================= */
 
-  section {
-    padding: 60px 80px;
+@media (max-width:1200px){
+
+  section{
+    padding:60px 80px;
   }
 
-  .hero-section {
-    padding: 80px;
+  .hero-content{
+    margin-left:0;
+    text-align:left;
   }
 
-  .hero-content {
-    margin-left: 0;
-  }
-
-  .hero-content h1 {
-    font-size: 44px;
-  }
-}
-
-/* ======================================== */
-/* LAPTOPS & TABLETS (≤992px) */
-/* ======================================== */
-@media (max-width: 992px) {
-
-  header {
-    top: 0;
-  }
-
-  .home {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    margin: 6px 10px;
-  }
-
-  .hero-section {
-    padding: 60px 40px;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    margin: auto;
-  }
-
-  .actions {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  section {
-    padding: 50px 40px;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
+  #pic,
+  #example,
+  #icon{
+    width:220px;
   }
 }
 
-/* ======================================== */
-/* TABLETS & LARGE PHONES (≤768px) */
-/* ======================================== */
-@media (max-width: 768px) {
+/* ================================================= */
+/* TABLETS */
+/* ================================================= */
 
-  .hero-section {
-    height: auto;
-    padding: 50px 28px;
+@media (max-width:992px){
+
+  header{
+    top:0;
   }
 
-  .hero-content h1 {
-    font-size: 34px;
+  .home{
+    flex-direction:column;
+    gap:12px;
   }
 
-  section {
-    padding: 40px 24px;
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    margin:6px 10px;
+  }
+
+  .hero-section{
+    padding:60px 40px;
+    text-align:center;
+    height:auto;
+  }
+
+  .hero-content{
+    margin:auto;
+    max-width:100%;
+  }
+
+  .actions{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  section{
+    padding:50px 40px;
+  }
+
+ 
+}
+
+/* ================================================= */
+/* LARGE MOBILE */
+/* ================================================= */
+
+@media (max-width:768px){
+
+  .hero-content h1{
+    font-size:34px;
+  }
+
+  section{
+    padding:40px 24px;
   }
 
   .card-grid,
   .pipeline,
   .gallery,
-  .tool-grid {
-    grid-template-columns: 1fr;
+  .tool-grid{
+    grid-template-columns:1fr;
   }
 
-  .tools {
-    padding: 40px 24px;
+  #pic,
+  #example,
+  #icon{
+    width:100%;
+    margin:auto;
   }
 
-  .cta {
-    padding: 40px 24px;
+  .tools{
+    padding:40px 24px;
+  }
+
+  .cta{
+    padding:36px 24px;
+    margin:24px 0;
   }
 
   
 }
 
-/* ======================================== */
-/* MOBILE PHONES (≤576px) */
-/* ======================================== */
-@media (max-width: 576px) {
+/* ================================================= */
+/* SMALL MOBILE */
+/* ================================================= */
 
-  body {
-    font-size: 14px;
+@media (max-width:576px){
+
+  body{
+    font-size:14px;
   }
 
-  .login {
-    padding: 6px 10px;
-    font-size: 11px;
+  nav a{
+    font-size:13px;
   }
 
-  nav a {
-    font-size: 13px;
+  .login{
+    padding:6px 10px;
+    font-size:12px;
   }
 
-  .hero-content h1 {
-    font-size: 26px;
+  .hero-content h1{
+    font-size:26px;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
+  .btn{
+    width:100%;
+    text-align:center;
   }
 
-  .section-title {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 14px;
+  .section-title{
+    font-size:22px;
   }
 }
 
-/* ======================================== */
-/* VERY SMALL DEVICES (≤400px) */
-/* ======================================== */
-@media (max-width: 400px) {
+/* ================================================= */
+/* VERY SMALL DEVICES */
+/* ================================================= */
 
-  .hero-content h1 {
-    font-size: 22px;
+@media (max-width:400px){
+
+  .hero-content h1{
+    font-size:22px;
   }
 
-  nav a {
-    font-size: 12px;
+  nav a{
+    font-size:12px;
   }
 
-  .btn {
-    font-size: 13px;
-    padding: 10px 14px;
+  .btn{
+    padding:10px 14px;
+    font-size:13px;
   }
 }
+
 
 </style>
 </head>
